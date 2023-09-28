@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fantasy Football Draft Assistant</title>
+  <link rel="stylesheet" type="text/css" href="draftHelper.css">
+</head>
+<body>
+  <div id="instructionPopup">
+    <div id="popupContent">
+      <h2 class="header1">Instructions</h2>
+      <p id="instructionText">
+        Welcome to the Draft Assistant! So how this tool works is it will be showing you who the top players are while drafting.
+        There are 3 columns:
+        <ol>
+          <li>Live user drafting matched with Draft Order interface from ESPN</li>
+          <li>Top players to pick and who we suggest to draft based on our rankings</li>
+          <li>All players remaining in the draft matched with our rankings, this is just for looking over for you</li>
+        </ol>
+        So when drafting1, when a someone picks a player, click on that button in the first column, and the suggested players will update. 
+        Repeat that process the whole draft, and when it is your pick, remember to pick both the player on the draft and the player button on here.
+      </p>
+      <h3>
+        *REMEMBER: Quarterbacks are not included in this draft assistant, so remember to draft them at your preference, but we suggest
+        around the 5th to 7th round to get more position players. AND KEEP TRACK OF YOUR POSITION NEEDS.*
+      </h3>
+      <button id="closeButton">X</button>
+    </div>
+  </div>
+
+  <div class="mainHeader">
+    <h1>Draft Assistant</h1>
+  </div>
+
+  <div class="banner">
+    <div class="dropdown">
+      <button class="dropbtn">
+        <img src="../data/dropdownImage.png" class="dropdownImg">
+      </button>
+      <div class="dropdown-content">
+        <a href="../homeFiles/home.html">Home</a>
+        <a href="../playerFiles/allRankings.html">All Rankings</a>
+        <a href="../playerFiles/rbRankings.html">RB Rankings</a>
+        <a href="../playerFiles/wrRankings.html">WR Rankings</a>
+        <a href="../playerFiles/teRankings.html">TE Rankings</a>
+        <a href="../draftHelpFiles/draftHelper.html">Draft Assistant</a>
+      </div>
+    </div>
+
+    <a href="../homeFiles/home.html">
+      <img src="../data/PrismFantasyLogo.png" class="logoPng">
+    </a>
+      
+    
+
+  </div>
+  
+  <div id="container">
+        <div class=”popup”>
+        </div>
+        <div id="draftRankingsList">
+          <h2 class="header">Draft Rankings</h2>
+          <div id="pickButtons"></div>
+        </div>
+        <div id="topPlayers">
+          <h2 class="header">Our Suggested Picks</h2>
+          <ul id="topPlayersList"></ul>
+        </div>
+        <div id="yourRankings">
+          <h2 class="header">Prism Rankings</h2>
+          <ul id="yourRankingsItems"></ul>
+        </div>
+  </div>
+           
+      
+  <script src="draftHelper.js"></script>
+</body>
+</html>

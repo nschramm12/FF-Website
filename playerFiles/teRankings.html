@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>prismFantasy-fullRankings</title>
+		<link rel="stylesheet" type="text/css" href="teRankings.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$.get("../data/teRankings.csv", function(data) {
+					var rows = data.split("\n");
+					var table = $("<table></table>");
+					var headerRow = $("<tr></tr>");
+					var headers = rows[0].split(",");
+					for (var i = 0; i < headers.length; i++) {
+						headerRow.append($("<th>" + headers[i] + "</th>"));
+					}
+					table.append(headerRow);
+					for (var i = 1; i < rows.length; i++) {
+						var cells = rows[i].split(",");
+						var row = $("<tr></tr>");
+						for (var j = 0; j < cells.length; j++) {
+							row.append($("<td>" + cells[j] + "</td>"));
+						}
+						table.append(row);
+					}
+					$("#table-container").append(table);
+				});
+			});
+		</script>
+    </head>
+    <body>
+
+		<div class="banner">
+			<div class="dropdown">
+				<button class="dropbtn">
+					<img src="../data/dropdownImage.png" class="dropdownImg">
+				</button>
+				<div class="dropdown-content">
+				  <a href="../homeFiles/home.html">Home</a>
+				  <a href="../playerFiles/allRankings.html">All Rankings</a>
+				  <a href="../playerFiles/rbRankings.html">RB Rankings</a>
+				  <a href="../playerFiles/wrRankings.html">WR Rankings</a>
+				  <a href="../playerFiles/teRankings.html">TE Rankings</a>
+				  <a href="../draftHelpFiles/draftHelper.html">Draft Assistant</a>
+				</div>
+			</div>
+
+			<a href="../homeFiles/home.html">
+				<img src="../data/PrismFantasyLogo.png" class="logoPng">
+			</a>
+			  
+			
+
+		</div>
+
+		
+
+		
+
+		<div class="header">
+			<h1>Tight End Rankings</h1>
+		</div>
+		
+
+        <div id="table-container"></div>
+
+        
+        
+    </body>
+
+</html>

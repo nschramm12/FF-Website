@@ -1,0 +1,49 @@
+body {
+    background-color:#696969;
+}
+
+.pushable {
+    background: #557A95;
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+}
+.front {
+    display: block;
+    padding: 32px 62px;
+    border-radius: 12px;
+    font-size: 1.9rem;
+    font-family: Chalkduster;
+    background: #7395ae;
+    color: white;
+    transform: translateY(-6px);
+}
+
+.pushable:active .front {
+transform: translateY(-2px);
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+}
+
+.button-row button {
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    display: block;
+    bottom: 0;
+}
